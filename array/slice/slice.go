@@ -9,7 +9,6 @@ import (
 	"reflect"
 )
 
-
 func InterfaceSlice(slice interface{}) []interface{} {
 	s := reflect.ValueOf(slice)
 	if s.Kind() != reflect.Slice {
@@ -40,10 +39,9 @@ func VariableArguments(args ...int) {
 	fmt.Printf("Type: %T, Value: %v\n", args, args)
 }
 
-
-func ForEach(slice interface{}, function func (interface{})) {
+func ForEach(slice interface{}, function func(interface{})) {
 	s := InterfaceSlice(slice)
-	for v := range s {
+	for _, v := range s {
 		function(v)
 	}
 }

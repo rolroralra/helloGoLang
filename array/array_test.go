@@ -5,6 +5,18 @@ import (
 	"testing"
 )
 
+func TestPrintArray(t *testing.T) {
+	PrintArray([...]int{1, 2, 3})
+	PrintArray([0]int{})
+}
+
+func TestForRange(t *testing.T) {
+	array := [...]int{3, 4, 5}
+	for i, v := range array {
+		fmt.Printf("index=%d, value=%v\n", i, v)
+	}
+}
+
 func TestArray(t *testing.T) {
 	var arr [2]string
 	arr[0] = "Hello"
