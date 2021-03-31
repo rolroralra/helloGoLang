@@ -1,7 +1,7 @@
 ## TODO
-- [ ] Variable Arguments in Function, Variable Parameteres in Function Call (func Test(args ...int) , Test(args[:]...)) 
+- [ ] Variable Arguments in Function, Variable Parameters in Function Call (func Test(args ...int) , Test(args[:]...)) 
 ```go
-pacakge main
+package main
 
 import (
   "fmt"
@@ -14,6 +14,6 @@ func Test(args ...string) {
 }
 
 func main() {
-   test([]string{"Hello", "World", "!"}...)
+   Test([]string{"Hello", "World", "!"}...)
 }
 ```
