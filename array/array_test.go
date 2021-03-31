@@ -31,3 +31,15 @@ func TestArray(t *testing.T) {
 	fmt.Println(primes)
 	fmt.Println(primes[1:3])
 }
+
+func TestArrayIsPrimitiveType(t *testing.T) {
+	arr := [2][5]int{{1, 2, 3, 4, 5}, {2, 4, 6, 8, 10}}
+
+	temp := arr[0]
+
+	temp[0] = 99
+
+	fmt.Println(arr)    // [[1 2 3 4 5] [2 4 6 8 10]]
+	fmt.Println(arr[0]) // [1 2 3 4 5]
+	fmt.Println(temp)   // [99 2 3 4 5]
+}
