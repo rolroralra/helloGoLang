@@ -45,3 +45,11 @@ func ForEach(slice interface{}, function func(interface{})) {
 		function(v)
 	}
 }
+
+// map delete : delete(m, index)
+// slice delete : s = append(s[:i], s[i+1:])
+func Delete(slice interface{}, index int) interface{} {
+	s := InterfaceSlice(slice)
+
+	return append(s[:index], s[index+1:])
+}

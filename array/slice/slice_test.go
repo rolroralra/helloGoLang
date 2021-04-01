@@ -111,3 +111,8 @@ func TestForRange(t *testing.T) {
 		fmt.Printf("index=%d, value=%v\n", i, v)
 	}
 }
+
+func TestDeleteElementInSlice(t *testing.T) {
+	slice := []string{"abc", "hello", "kkk", "123", "456"}
+	fmt.Println(Delete(slice, 2))
+}

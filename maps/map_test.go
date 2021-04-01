@@ -28,7 +28,18 @@ func Test(t *testing.T) {
 	PrintMap(mapLiteral2)
 }
 
-func Test2(t *testing.T) {
+func TestForRange(t *testing.T) {
+	m := map[string]Vertex{
+		"a": Vertex{x: 1, y: 2},
+		"b": Vertex{1, 2},
+	}
+
+	for key, value := range m {
+		fmt.Printf("key: %v, value: %v\n", key, value)
+	}
+}
+
+func TestGetValue(t *testing.T) {
 	m := map[string]int{}
 
 	m["a"] = 1
@@ -44,5 +55,22 @@ func Test2(t *testing.T) {
 
 	elem, ok = m["a"]
 	fmt.Println(elem, ok)
+}
+
+// map delete : delete(m, index)
+// slice delete : s = append(s[:i], s[i+1:])
+func TestDeleteKey(t *testing.T) {
+	m := map[string]int{
+		"a": 1,
+		"b": 2,
+		"c": 3,
+	}
+
+	for key, value := range m {
+		fmt.Printf("key: %v, value: %v\n", key, value)
+	}
+
+	delete(m, "b")
+	PrintMap(m)
 
 }
